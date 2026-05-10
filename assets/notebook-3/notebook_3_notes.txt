@@ -1,0 +1,132 @@
+BERT-Based Customer Review Sentiment Analysis - Notes
+====================================================
+
+Project Objective
+-----------------
+This notebook demonstrates how to fine-tune a BERT-family model
+(DistilBERT) for binary sentiment classification of customer reviews.
+
+The model predicts whether a review expresses:
+- Positive sentiment (1)
+- Negative sentiment (0)
+
+Dataset Details
+---------------
+Dataset Type    : Synthetic Customer Review Dataset
+Total Samples   : 500
+Features        :
+    - review
+    - label
+
+Class Distribution
+------------------
+- Negative Reviews (0): 267
+- Positive Reviews (1): 233
+
+Model Details
+-------------
+Base Model      : distilbert-base-uncased
+Architecture    : DistilBERT
+Task            : Sequence Classification
+Number of Labels: 2
+Framework       : Hugging Face Transformers
+
+Training Configuration
+----------------------
+Epochs                : 2
+Train/Test Split      : 80/20
+Training Samples      : 400
+Testing Samples       : 100
+Batch Size            : 16
+Learning Rate         : 2e-5
+Weight Decay          : 0.01
+Evaluation Strategy   : Every Epoch
+Metric for Best Model : F1 Score
+
+Evaluation Results
+------------------
+- Accuracy  : 1.0000
+- Precision : 1.0000
+- Recall    : 1.0000
+- F1 Score  : 1.0000
+- Eval Loss : 0.3272
+
+Training Behavior
+-----------------
+Training loss decreased from:
+- 0.5980 -> 0.2779
+
+This indicates successful fine-tuning and stable convergence.
+
+Visualizations Included
+-----------------------
+- Sentiment class distribution
+- Training loss curve
+- Confusion matrix
+- Probability bar chart
+- Sample predictions table
+- Final project summary
+
+Confusion Matrix
+----------------
+                Predicted
+                Neg   Pos
+Actual Neg       47     0
+Actual Pos        0    53
+
+The model correctly classified all test samples.
+
+Interactive Features
+--------------------
+- Real-time sentiment prediction console
+- Probability visualization for custom reviews
+- Confidence score reporting
+
+Sample Predictions
+------------------
+Input:
+    This product is amazing and exceeded my expectations.
+
+Output:
+    Positive (Confidence: 0.7009)
+
+Input:
+    Very poor quality and not worth the money.
+
+Output:
+    Negative (Confidence: 0.6836)
+
+Business Applications
+---------------------
+- Automated review analysis
+- Customer satisfaction monitoring
+- Product quality assessment
+- Brand reputation tracking
+
+Key Learnings
+-------------
+- Fine-tuned a transformer model for NLP classification.
+- Used Hugging Face Trainer API.
+- Evaluated using multiple metrics.
+- Visualized model performance.
+- Built an interactive prediction interface.
+
+Limitations
+-----------
+- Dataset is synthetic and relatively simple.
+- Perfect metrics may indicate the task is easy.
+- Real-world data would be more challenging.
+
+Future Improvements
+-------------------
+- Use real Amazon or Yelp review datasets.
+- Extend to multi-class sentiment analysis.
+- Deploy as a web application.
+- Add explainability with attention visualization.
+
+Conclusion
+----------
+This project successfully demonstrates end-to-end sentiment analysis
+using DistilBERT. It includes dataset creation, tokenization,
+fine-tuning, evaluation, visualization, and interactive inference.
+The notebook is production-inspired and suitable for portfolio use.
