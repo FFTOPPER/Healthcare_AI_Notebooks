@@ -1,0 +1,39 @@
+# ============================================================
+# Healthcare AI Notebooks - Requirements
+# ============================================================
+# This file contains all Python dependencies required to run:
+# 1. Healthcare LLM Fine-Tuning with Unsloth + Gemma
+# 2. Data Access from PostgreSQL, Google Drive, and Supabase
+# 3. BERT-Based Customer Review Sentiment Analysis
+# ============================================================
+
+# Core Data Science Libraries
+numpy>=1.24.0
+pandas>=2.0.0
+matplotlib>=3.7.0
+scikit-learn>=1.3.0
+
+# Deep Learning
+torch>=2.0.0
+
+# Hugging Face Ecosystem
+transformers>=4.50.0
+datasets>=3.0.0
+evaluate>=0.4.0
+accelerate>=1.0.0
+huggingface-hub>=0.30.0
+
+# Unsloth for Fast Fine-Tuning
+unsloth>=2026.5.2
+
+# Database Connectivity
+sqlalchemy>=2.0.0
+psycopg2-binary>=2.9.9
+
+# Supabase Client
+supabase>=2.4.0
+
+# Optional Utilities
+ipywidgets>=8.1.0
+jupyter>=1.0.0
+notebook>=7.0.0
